@@ -15,7 +15,8 @@ function App() {
   const [productsData, setProductsData] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:4000/products")
+    
+    fetch("https://fakestoreapi.com/products?limit=10")
       .then((res) => res.json())
       .then((json) => {
         setProductsData(json);
